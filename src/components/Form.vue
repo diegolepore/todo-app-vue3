@@ -22,7 +22,6 @@ export default {
   },
   methods: {
     submitTodo() {
-      // this.$emit("addTodo", this.todo);
       this.global.addTodo(this.todo);
       this.todo = "";
     },

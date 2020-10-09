@@ -2,7 +2,7 @@
   <div>
     <header class="header">
       <div class="header__date">
-        <h1 class="header__date-date">{{ UTCDate }}</h1>
+        <h1 class="header__date-date">{{ dateNow }}</h1>
         <h3 class="header__date-active">{{ activeTasks() }}</h3>
       </div>
 
@@ -55,14 +55,9 @@ export default {
         activeLength > 1 || activeLength < 1 ? "tasks" : "task";
       return `${activeLength} active ${taskPluralSingular}`;
     },
-    // filter(e, status) {
-    //   console.log(e.target);
-    //   // this.$emit("filterTodos", status);
-    //   this.global.filterTodos(status);
-    // },
   },
   computed: {
-    UTCDate() {
+    dateNow() {
       const d = new Date();
       return `${d.getDate()} / ${d.getMonth() + 1} / ${d.getFullYear()}`;
     },

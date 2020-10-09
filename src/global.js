@@ -28,9 +28,9 @@ const state = reactive({
       done: false,
     },
   ],
+  nextId: 6,
   tasksFiltered: [],
   activeTab: "all",
-  nextId: 6,
 });
 
 const filterTodos = function(filterOption) {
